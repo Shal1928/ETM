@@ -4,19 +4,10 @@ using System.Windows.Input;
 using UseAbilities.MVVM.Base;
 using UseAbilities.MVVM.Command;
 
-namespace EasyTaskManager.ViewModels
+namespace EasyTaskManager.ViewModels.MainViewModel
 {
-    public class MainViewModel : ViewModelBase
+    public partial class MainViewModel : ViewModelBase
     {
-        private ICommand _testService;
-        public ICommand TestService
-        {
-            get
-            {
-                return _testService ?? (_testService = new RelayCommand(param => OnTestService(), null));
-            }
-        }
-
         private void OnTestService()
         {
             var calc = new CalculatorClient();

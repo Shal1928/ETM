@@ -74,7 +74,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel\Comands.cs" />
+    <Compile Include="ViewModels\MainViewModel\Logic.cs" />
+    <Compile Include="ViewModels\MainViewModel\Properties.cs" />
     <Compile Include="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
       <SubType>Code</SubType>

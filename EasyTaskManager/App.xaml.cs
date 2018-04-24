@@ -1,5 +1,5 @@
-﻿using System.Windows;
-using EasyTaskManager.ViewModels;
+﻿using EasyTaskManager.ViewModels.MainViewModel;
+using System.Windows;
 using UseAbilities.MVVM.Managers;
 
 namespace EasyTaskManager
