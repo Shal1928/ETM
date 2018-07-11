@@ -141,6 +141,12 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\UseAbilities\UseAbilities\UseAbilities.System\UseAbilities.System.csproj">
+      <Project>{60F51AF3-F6C1-44F9-A040-CBB3CFE43857}</Project>
+      <Name>UseAbilities.System</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
