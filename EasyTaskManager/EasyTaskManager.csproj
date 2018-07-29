@@ -55,10 +55,6 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="UseAbilities.MVVM, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\UseAbilities\UseAbilities\UseAbilities.Controls\bin\Release\UseAbilities.MVVM.dll</HintPath>
-    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -149,6 +145,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\UseAbilities\UseAbilities\UseAbilities.MVVM\UseAbilities.MVVM.csproj">
+      <Project>{8ac0bf72-84a5-4e2e-9a85-1def2167b51e}</Project>
+      <Name>UseAbilities.MVVM</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\UseAbilities\UseAbilities\UseAbilities.System\UseAbilities.System.csproj">
       <Project>{60F51AF3-F6C1-44F9-A040-CBB3CFE43857}</Project>
       <Name>UseAbilities.System</Name>

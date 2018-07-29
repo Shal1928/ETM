@@ -19,5 +19,10 @@ namespace EasyTaskManager.ViewModels.MainViewModel
                 return _testService ?? (_testService = new RelayCommand(param => OnTestService(), null));
             }
         }
+
+        private void OnTestService()
+        {
+
+        }
     }
 }
