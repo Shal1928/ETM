@@ -38,6 +38,10 @@
     <ApplicationIcon>Resources\sun.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Hardcodet.Wpf.TaskbarNotification, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net451\Hardcodet.Wpf.TaskbarNotification.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Activities" />
@@ -72,6 +76,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Converters\VisibilityConverter.cs" />
     <Compile Include="Service References\TestNameSpace\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -104,7 +109,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Fakes Include="Fakes\UseAbilities.MVVM.fakes" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -152,6 +156,10 @@
     <ProjectReference Include="..\..\UseAbilities\UseAbilities\UseAbilities.System\UseAbilities.System.csproj">
       <Project>{60F51AF3-F6C1-44F9-A040-CBB3CFE43857}</Project>
       <Name>UseAbilities.System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UseAbilities\UseAbilities\UseAbilities.WPF\UseAbilities.WPF.csproj">
+      <Project>{DE840968-7F50-41F7-B88A-59ADD6B61D73}</Project>
+      <Name>UseAbilities.WPF</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

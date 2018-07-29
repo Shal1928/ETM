@@ -4,8 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:base="clr-namespace:UseAbilities.MVVM.Base;assembly=UseAbilities.MVVM"
+        xmlns:notify="http://www.hardcodet.net/taskbar"
+        xmlns:Converters="clr-namespace:EasyTaskManager.Converters" 
         mc:Ignorable="d"
-        WindowState="{Binding WindowState, Mode=TwoWay}"
+        Visibility="{Binding IsVisible, Mode=TwoWay, Converter={Converters:VisibilityConverter}}"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -19,7 +21,21 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
+        <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="TaskbarIcon action" Command="{Binding TestService}">
+            
+        </Button>
+        
+        <notify:TaskbarIcon
+            ToolTipText="Poli Makro"
+            LeftClickCommand="{Binding TestService}">
+            <notify:TaskbarIcon.ContextMenu>
+                <ContextMenu Background="LightCoral">
+                    <MenuItem Header="First Menu Item" />
+                    <MenuItem Header="Second Menu Item" />
+                </ContextMenu>
+            </notify:TaskbarIcon.ContextMenu>
 
+        </notify:TaskbarIcon>
     </Grid>
 </base:ViewBase>
 

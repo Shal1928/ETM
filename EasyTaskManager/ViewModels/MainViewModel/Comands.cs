@@ -22,7 +22,7 @@ namespace EasyTaskManager.ViewModels.MainViewModel
 
         private void OnTestService()
         {
-
+            IsVisible = !IsVisible;
         }
     }
 }

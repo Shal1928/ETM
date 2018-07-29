@@ -24,5 +24,19 @@ namespace EasyTaskManager.ViewModels.MainViewModel
                 _windowState = value;
             }
         }
+
+        private bool _isVisible = true;
+
+        public virtual bool IsVisible
+        {
+            get
+            {
+                return _isVisible;
+            }
+            set
+            {
+                _isVisible = value;
+            }
+        }
     }
 }
