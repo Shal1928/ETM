@@ -25,9 +25,9 @@
             
         </Button>
         
-        <notify:TaskbarIcon
-            ToolTipText="Poli Makro"
-            LeftClickCommand="{Binding TestService}">
+        <notify:TaskbarIcon IconSource="/Images/Sun.ico"
+                            ToolTipText="Poli Makro"
+                            LeftClickCommand="{Binding TestService}">
             <notify:TaskbarIcon.ContextMenu>
                 <ContextMenu Background="LightCoral">
                     <MenuItem Header="First Menu Item" />

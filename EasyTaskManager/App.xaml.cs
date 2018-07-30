@@ -25,10 +25,10 @@ namespace EasyTaskManager
 
             SingleInstanceHelper.Make();
 
-            _notifyIcon = new NotifyIcon();
-            var iconHandle = EasyTaskManager.Properties.Resources.Sun.Handle;
-            _notifyIcon.Icon = Icon.FromHandle(iconHandle);
-            _notifyIcon.Visible = true;
+            //_notifyIcon = new NotifyIcon();
+            //var iconHandle = EasyTaskManager.Properties.Resources.Sun.Handle;
+            //_notifyIcon.Icon = Icon.FromHandle(iconHandle);
+            //_notifyIcon.Visible = true;
 
             AdvancedViewManager.Instance.RegisterRelation<MainViewModel, Views.MainView>();
             AdvancedViewManager.Instance.ResolveAndShow<MainViewModel>();
