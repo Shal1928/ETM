@@ -24,15 +24,15 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>   
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="TaskbarIcon action" Command="{Binding ShowHideCommand}">
-            
-        </Button>
-        
+        <Menu Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3">
+            <MenuItem Header="Скрыть" Command="{Binding ShowHideCommand}" />
+        </Menu>
+
         <notify:TaskbarIcon IconSource="/Images/Sun.ico"
                             ToolTipText="Poli Makro"
                             LeftClickCommand="{Binding ShowHideCommand}">
