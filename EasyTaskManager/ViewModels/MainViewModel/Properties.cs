@@ -11,20 +11,6 @@ namespace EasyTaskManager.ViewModels.MainViewModel
 {
     public partial class MainViewModel : ViewModelBase
     {
-        private WindowState _windowState;
-        public WindowState WindowState
-        {
-            get
-            {
-                return _windowState;
-            }
-            set
-            {
-                OnWindowStateChanged(value);
-                _windowState = value;
-            }
-        }
-
         private bool _isVisible = true;
 
         public virtual bool IsVisible

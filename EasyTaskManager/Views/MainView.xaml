@@ -3,12 +3,20 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:base="clr-namespace:UseAbilities.MVVM.Base;assembly=UseAbilities.MVVM"
         xmlns:notify="http://www.hardcodet.net/taskbar"
         xmlns:Converters="clr-namespace:EasyTaskManager.Converters" 
         mc:Ignorable="d"
         Visibility="{Binding IsVisible, Mode=TwoWay, Converter={Converters:VisibilityConverter}}"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" Topmost="True">
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -21,13 +29,13 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="TaskbarIcon action" Command="{Binding TestService}">
+        <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="TaskbarIcon action" Command="{Binding ShowHideCommand}">
             
         </Button>
         
         <notify:TaskbarIcon IconSource="/Images/Sun.ico"
                             ToolTipText="Poli Makro"
-                            LeftClickCommand="{Binding TestService}">
+                            LeftClickCommand="{Binding ShowHideCommand}">
             <notify:TaskbarIcon.ContextMenu>
                 <ContextMenu Background="LightCoral">
                     <MenuItem Header="First Menu Item" />

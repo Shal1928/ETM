@@ -11,18 +11,22 @@ namespace EasyTaskManager.ViewModels.MainViewModel
 {
     public partial class MainViewModel : ViewModelBase
     {
-        private ICommand _testService;
-        public ICommand TestService
+        private ICommand _loadedCommand;
+        public ICommand LoadedCommand
         {
             get
             {
-                return _testService ?? (_testService = new RelayCommand(param => OnTestService(), null));
+                return _loadedCommand ?? (_loadedCommand = new RelayCommand(param => OnLoadedHandler(), null));
             }
         }
 
-        private void OnTestService()
+        private ICommand _showHideCommand;
+        public ICommand ShowHideCommand
         {
-            IsVisible = !IsVisible;
+            get
+            {
+                return _showHideCommand ?? (_showHideCommand = new RelayCommand(param => OnShowHideHotKeyHandler(), null));
+            }
         }
     }
 }
