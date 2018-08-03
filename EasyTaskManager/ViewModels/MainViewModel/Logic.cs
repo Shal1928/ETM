@@ -1,9 +1,5 @@
-﻿using EasyTaskManager.TestNameSpace;
-using System;
-using System.Windows;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using UseAbilities.MVVM.Base;
-using UseAbilities.MVVM.Command;
 using UseAbilities.System.ApplicationHelper;
 using UseAbilities.System.Core.Enums;
 
@@ -23,6 +19,7 @@ namespace EasyTaskManager.ViewModels.MainViewModel
 
         private void OnLoadedHandler()
         {
+            SolutionStore.Save(SOLUTION);
             _showHideHotKey = new HotKeyHelper(Key.Escape, KeyModifier.None, OnShowHideHotKeyHandler);
         }
     }

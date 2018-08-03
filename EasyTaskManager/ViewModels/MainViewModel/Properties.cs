@@ -1,11 +1,6 @@
 ﻿using EasyTaskManager.Models;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+using UseAbilities.IoC.Attributes;
+using UseAbilities.IoC.Stores;
 using UseAbilities.MVVM.Base;
 
 namespace EasyTaskManager.ViewModels.MainViewModel
@@ -26,6 +21,21 @@ namespace EasyTaskManager.ViewModels.MainViewModel
             }
         }
 
-        public virtual Solution Solution { get; set; }
+        [InjectedProperty]
+        public IFileStore<Solution> SolutionStore
+        {
+            get;
+            set;
+        }
+
+        private Solution _solution;
+
+        public virtual Solution Solution
+        {
+            get
+            {
+                return _solution ?? (_solution = SolutionStore.Load());
+            }
+        }
     }
 }

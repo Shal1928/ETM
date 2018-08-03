@@ -79,6 +79,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Converters\VisibilityConverter.cs" />
+    <Compile Include="Core\SolutionStore.cs" />
     <Compile Include="Models\Project.cs" />
     <Compile Include="Models\Solution.cs" />
     <Compile Include="Service References\TestNameSpace\Reference.cs">
@@ -132,9 +133,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Core\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
@@ -154,6 +153,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\UseAbilities\UseAbilities\UseAbilities.IoC\UseAbilities.IoC.csproj">
+      <Project>{B855AE04-A938-472C-BA0A-1A546D5A3FEB}</Project>
+      <Name>UseAbilities.IoC</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\UseAbilities\UseAbilities\UseAbilities.MVVM\UseAbilities.MVVM.csproj">
       <Project>{8ac0bf72-84a5-4e2e-9a85-1def2167b51e}</Project>
       <Name>UseAbilities.MVVM</Name>
@@ -165,6 +168,10 @@
     <ProjectReference Include="..\..\UseAbilities\UseAbilities\UseAbilities.WPF\UseAbilities.WPF.csproj">
       <Project>{DE840968-7F50-41F7-B88A-59ADD6B61D73}</Project>
       <Name>UseAbilities.WPF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UseAbilities\UseAbilities\UseAbilities.XML\UseAbilities.XML.csproj">
+      <Project>{F4863115-63AF-4DBC-A8EE-9771426DAEB0}</Project>
+      <Name>UseAbilities.XML</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

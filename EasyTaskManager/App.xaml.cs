@@ -1,14 +1,14 @@
 ﻿using System.Diagnostics;
-using System.Drawing;
-using System.Net.Mime;
-using System.Reflection;
-using System.Threading;
 using EasyTaskManager.ViewModels.MainViewModel;
 using System.Windows;
-using System.Windows.Forms;
 using Microsoft.VisualBasic.Logging;
 using UseAbilities.MVVM.Managers;
 using UseAbilities.System.ApplicationHelper;
+using UseAbilities.IoC.Helpers;
+using UseAbilities.IoC.Stores;
+using EasyTaskManager.Models;
+using UseAbilities.IoC.Core;
+using EasyTaskManager.Core;
 
 namespace EasyTaskManager
 {
@@ -17,11 +17,10 @@ namespace EasyTaskManager
     /// </summary>
     public partial class App
     {
-        private NotifyIcon _notifyIcon;
-
         private void App_OnStartup(object sender, StartupEventArgs e)
         {
             InitLogger();
+            Loader(IoCManager.Container);
 
             SingleInstanceHelper.Make();
 
@@ -40,6 +39,11 @@ namespace EasyTaskManager
                         Delimiter = "|",
                         AutoFlush = true
                 });
+        }
+
+        private void Loader(IoC ioc)
+        {
+            ioc.RegisterSingleton<IFileStore<Solution>, SolutionStore>();
         }
     }
 }
