@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EasyTaskManager.Models;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -24,5 +25,7 @@ namespace EasyTaskManager.ViewModels.MainViewModel
                 _isVisible = value;
             }
         }
+
+        public virtual Solution Solution { get; set; }
     }
 }

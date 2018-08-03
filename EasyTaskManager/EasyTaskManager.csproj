@@ -89,6 +89,7 @@
     <Compile Include="ViewModels\MainViewModel\Comands.cs" />
     <Compile Include="ViewModels\MainViewModel\Logic.cs" />
     <Compile Include="ViewModels\MainViewModel\Properties.cs" />
+    <Compile Include="ViewModels\MainViewModel\TestData.cs" />
     <Compile Include="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
       <SubType>Code</SubType>

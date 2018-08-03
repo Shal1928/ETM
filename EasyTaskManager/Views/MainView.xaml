@@ -30,8 +30,14 @@
         </Grid.RowDefinitions>
 
         <Menu Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3">
-            <MenuItem Header="Скрыть" Command="{Binding ShowHideCommand}" />
+            <MenuItem Header="Открыть" Command="{Binding ShowHideCommand}" />
+            <MenuItem Header="Сохранить" Command="{Binding ShowHideCommand}" />
+            <MenuItem Header="Настройки" Command="{Binding ShowHideCommand}" />
         </Menu>
+
+        <ListView Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                  ItemsSource="{Binding Solution.Projects}" DisplayMemberPath="Title" />
+
 
         <notify:TaskbarIcon IconSource="/Images/Sun.ico"
                             ToolTipText="Poli Makro"
